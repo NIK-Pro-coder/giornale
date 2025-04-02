@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-WORLD_NEWS_API_KEY = os.getenv("WORLD_NEWS_API_KEY")
+WORLD_NEWS_API_KEY = os.getenv("WORLD_NEWS_API_KEY_BACKUP")
 
 def getWorldNews(endpoint: str) :
 	link = f"https://api.worldnewsapi.com/{endpoint}"
@@ -40,7 +40,7 @@ def getNews(articles_num: int = 100) :
 	offset = 0
 
 	while left > 0 :
-		info = getWorldNews(f"search-news?language=en&number={min(100, left)}&offset={offset}")
+		info = getWorldNews(f"search-news?sort=publish-time&language=en&number={min(100, left)}&offset={offset}")
 
 		if not info["success"] :
 			return info

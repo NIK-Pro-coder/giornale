@@ -81,7 +81,7 @@ async function main() {
 			summary.innerHTML += '<code class="hide">no category</code>';
 		}
 
-		summary.innerHTML += `<h3>${n.title}</h3>`;
+		summary.innerHTML += `<h3><time>${n.publish_date}</time> ${n.title}</h3>`;
 
 		details.appendChild(summary);
 

@@ -66,3 +66,14 @@ body > * {
 h1 {
 	margin: 0;
 }
+
+time {
+	font-size: 0.7em;
+	background: gray;
+	color: white;
+
+	padding: 2px;
+	margin: 1px;
+
+	border-radius: 5px;
+}
