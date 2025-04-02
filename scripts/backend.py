@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-WORLD_NEWS_API_KEY = os.getenv("WORLD_NEWS_API_KEY_BACKUP")
+WORLD_NEWS_API_KEY = os.getenv("WORLD_NEWS_API_KEY")
 
 def getWorldNews(endpoint: str) :
 	link = f"https://api.worldnewsapi.com/{endpoint}"
