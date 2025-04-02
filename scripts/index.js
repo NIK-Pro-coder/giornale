@@ -11,7 +11,7 @@ function updateFilter() {
 		console.log(me.children);
 		let category = me.children[3].children[0].innerHTML;
 
-		if (category.startsWith(input.value)) {
+		if (category.toLowerCase().startsWith(input.value.toLowerCase())) {
 			me.hidden = false;
 			art = true;
 		} else {
@@ -47,8 +47,6 @@ function filterContent() {
 }
 
 async function main() {
-	const cache = document.getElementById("cache");
-	cache.hidden = true;
 	document.getElementById("noart").hidden = true;
 
 	let given = await fetch("/news");
@@ -61,11 +59,6 @@ async function main() {
 	if (data.success == false) {
 		news_div.innerHTML = `Cannot get news articles, reason: "${data.reason}"`;
 		return;
-	}
-
-	cache.hidden = false;
-	if (data.cached) {
-		cache.innerHTML = "Using cached news articles";
 	}
 
 	const NEWS = data.news;

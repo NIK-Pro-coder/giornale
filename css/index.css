@@ -59,6 +59,10 @@ body {
 	align-items: center;
 }
 
+body > * {
+	max-width: 100%;
+}
+
 h1 {
 	margin: 0;
 }
