@@ -1,0 +1,64 @@
+details {
+	margin: 10px;
+	padding: 5px;
+
+	border: solid 2px black;
+	border-radius: 3px;
+
+	background: lightgray;
+}
+
+details img {
+	border-radius: 5px;
+
+	max-width: 20%;
+
+	display: block;
+}
+
+summary {
+	list-style: none;
+}
+
+code {
+	background: black;
+	color: white;
+
+	border-radius: 5px;
+
+	padding: 4px;
+
+	margin-right: 5px;
+}
+
+.hide {
+	display: none;
+}
+
+blockquote {
+	border: solid 1px black;
+	border-radius: 5px;
+
+	padding: 5px;
+
+	background: gray;
+}
+
+blockquote > p {
+	margin-top: 0;
+}
+
+h3 {
+	margin: 0;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+
+	align-items: center;
+}
+
+h1 {
+	margin: 0;
+}
